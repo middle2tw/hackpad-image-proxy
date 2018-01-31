@@ -1,6 +1,6 @@
 <?php
 
-if (!preg_match('#http://s3.amazonaws.com/hackpad-profile-photos/([^@]*@[^%]*)#', urldecode($_SERVER['REQUEST_URI']), $matches)) {
+if (!preg_match('#http://s3.amazonaws.com/hackpad-profile-photos/([^@]*@[^%?]*)#', urldecode($_SERVER['REQUEST_URI']), $matches)) {
     die("unknown url " . htmlspecialchars(urldecode($_SERVER['REQUEST_URI'])) . ", source: https://github.com/middle2tw/hackpad-image-proxy");
 }
 
